@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>biblio site </title>
+   <style >
+        body {
+            font-family: Arial, sans-serif;
+    background-color:  #eeeeee;
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+        
+        h1 {
+            text-align: center;
+    font-size: 18px;
+    color: black;
+    margin-bottom: 35px;
+        
+        }
+        p {
+            color: #050404ea;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        li {
+            background-color: #eeeeee;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+a {
+            color: #050404ea;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            text-decoration: none;
+            color: black;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+ul{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+}
+.page-exit {
+    animation: phonkExit 0.7s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@keyframes phonkExit {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    100% {
+        transform: scale(1.08);
+        opacity: 0;
+        filter: blur(8px);
+    }
+}
+body {
+    animation: slideIn 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+</style>
+</head> 
+        <body>
+    <h1>Welcome to my website</h1>
+
+    <p>Read the following books to improve your life.</p>
+
+    <ul>
+        <li>
+            <a href="./atomic-habits.html" target="_blank">
+    Atomic Habits
+</a>
+<p>
+            <p> A book about building good habits and breaking bad ones.</p>
+        </li>
+
+        <li>
+            <a href="./subtle-art.html" target="_blank">
+                The Subtle Art of Not Giving a F*ck
+            </a>
+            <p>A book about living a meaningful life by focusing on what truly matters.</p>
+        </li>
+
+        <li>
+            <a href="ikigai.html" target="_blank">Ikigai</a>
+            <p>A book about finding purpose and fulfillment in life.</p>
+        </li>
+
+        <li>
+            <a href=" the psychology of money.html" target="_blank">The Psychology of Money</a>
+            <p>A book about the psychological aspects of financial decision-making.</p>
+        </li>
+    </ul>
+    <script>
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", function(event) {
+                if (this.target === "_blank") {
+                    return; // Allow default behavior for links that open in a new tab
+                }
+                event.preventDefault();
+
+                const destination = this.href;
+
+                document.body.classList.add("page-exit");
+
+                setTimeout(function() {
+                    window.location.href = destination;
+                }, 700);
+            });
+        });
+    </script>
+</body>
+</html>

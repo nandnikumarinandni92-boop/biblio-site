@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Subtle Art of Not Giving a F*ck</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eeeeee;
+            margin: 0;
+            padding: 40px;
+            animation: slideIn 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+
+        .book-page {
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            color: #222;
+            margin-top: 30px;
+        }
+
+        p {
+            color: #333;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 18px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            transform: translateX(-5px);
+            background-color: #555;
+        }
+
+        .page-exit {
+            animation: slideOutRight 0.7s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideOutRight {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="book-page">
+<h1>The Subtle Art of Not Giving a F*ck</h1>
+
+        <p class="subtitle">
+            A different approach to living a meaningful life.
+        </p>
+
+        <h2>About the Book</h2>
+        
+
+        <p>
+            This book explores how choosing what truly matters
+            can help us focus our energy on the things that are
+            important in life.
+        </p>
+        <h2>Main points</h2>
+        <h3>1. Choose what matters</h3>
+        <p>we have limited time and energy, so we must be intentional about where we focus our efforts</p>
+        <h3>2. Embrace discomfort</h3>
+        <p>growth and fulfillment often come from pushing through pain and challenges</p>
+        <h3>3. Focus on what you can control</h3>
+        <p>let go of things outside your influence and direct your attention inward</p>
+        <h3>4. Accept difficulty</h3>
+        <p>challenges are a normal part of life and can lead to growth</p>
+        <h3>5. Take responsibility</h3>
+        <p>we cannot control everything, but we can often choose how we respond</p>
+        <h3>6. Define your own values</h3>
+        <p>make decisions based on meaningful values rather than constantly seeking approval from others</p>
+        <h3>7. Accept your limitations</h3>
+        <p>Recognition of our own limitations can help us focus on what we can realistically achieve and find contentment in our lives.</p>
+        <h2>why it matters</h2>
+
+        <p>The book encourages readers to stop chasing expectation and focus on meaning ful priorities . It reminds us that a fulfilling life is not free problems; it involves choosing which problems are worth working through .</p>
+        <p>
+            We cannot care deeply about everything. Learning to
+            choose our priorities can help us deal with problems
+            more calmly and live with greater purpose.
+        </p>
+        <h3>Key Idea</h3>
+        <p>
+            We cannot care deeply about everything. Learning to
+            choose our priorities can help us deal with problems
+            more calmly and live with greater purpose.
+        </p>
+
+        <a class="back-button" href="index.html">
+            ← Back to Books
+        </a>
+
+    </div>
+
+    <script>
+        document.querySelector(".back-button").addEventListener("click", function(event) {
+            event.preventDefault();
+
+            const destination = this.href;
+
+            document.body.classList.add("page-exit");
+
+            setTimeout(function() {
+                window.location.href = destination;
+            }, 700);
+        });
+    </script>
+
+</body>
+
+</html>
+    

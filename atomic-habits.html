@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atomic Habits</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eeeeee;
+            margin: 0;
+            padding: 40px;
+            animation: slideIn 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+        .book-page img{
+    .book-page img {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    margin: 0 auto;
+}
+}
+        .book-page 
+    
+{
+            max-width:  800px;
+            margin: auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            color: #222;
+            margin-top: 30px;
+        }
+
+        p {
+            color: #333;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+        .back-button {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.back-button:hover {
+    background-color: #222;
+}
+
+        .page-exit {
+            animation: slideOutRight 0.7s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideOutRight {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+    </head>
+<body>
+    <div class="book-page">
+
+    <h1>Atomic Habits</h1>
+    <h3>by James Clear</h3>
+    <p class="subtitle">
+        Small habits. Remarkable results.
+    </p>
+
+    <h2>About the Book</h2>
+
+    <p>
+        Atomic Habits explains how small changes in our daily
+        behavior can gradually create meaningful results.
+        Instead of trying to completely change our lives at once,
+        the book focuses on making small improvements consistently.
+    </p>
+
+    <h2>Main Ideas</h2>
+
+    <p>
+        <strong>1. Small improvements matter</strong><br>
+        Even a small positive change can become powerful when
+        repeated over a long period of time.
+    </p>
+
+    <p>
+        <strong>2. Build systems, not just goals</strong><br>
+        Goals tell us what we want to achieve, while systems are
+        the daily actions that help us get there.
+    </p>
+
+    <p>
+        <strong>3. Make good habits easier</strong><br>
+        We are more likely to repeat a habit when the environment
+        makes the behavior simple and convenient.
+    </p>
+
+    <p>
+        <strong>4. Consistency is important</strong><br>
+        Progress comes from repeatedly doing useful actions,
+        even when the results are not immediately visible.
+    </p>
+
+    <h2>Why It Matters</h2>
+
+    <p>
+        Our everyday actions shape our routines and, over time,
+        can influence the direction of our lives. Focusing on
+        manageable changes can make improvement feel more realistic
+        and sustainable.
+    </p>
+
+    <h2>Key Takeaway</h2>
+
+    <p>
+        You don't have to transform everything overnight.
+        Start small, repeat the right actions, and allow those
+        small changes to build over time.
+    </p>
+
+    <a class="back-button" href="./index.html"> back to books</a>
+    </div>
+
+    <script>
+        document.querySelector(".back-button").addEventListener("click", function(event) {
+            event.preventDefault();
+
+            const destination = this.href;
+
+            document.body.classList.add("page-exit");
+
+            setTimeout(function() {
+                window.location.href = destination;
+            }, 700);
+        });
+    </script>
+
+</body>
+
+</html>
+    
